@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+ 
+{# {% block title %}Liste des Recettes{% endblock %} #}
+{% block title "Liste des Recettes" %}
+
+{% block body %}
+<h1>Bienvenu sur JLF Moto</h1>
+<div class = "container text-center">
+    <div class = "row">
+    {% for moto in motos %}
+    <div class="card max-w-sm col-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 my-8 mr-4" data-type="post">
+        <h2><a href={{ path('details', {id : moto.id, nom : moto.nom})}}>{{ moto.nom }} </a></h2>
+        <img src = "https://pbs.twimg.com/media/EdDUBw0WkAAQLJ1?format=jpg&name=large" width="150" height="200"> 
+    </div>
+            
+    {% else %}
+        <p>Pas encore de recette</p>
+    {% endfor %}
+
+</div>
+</div>
+{% endblock %}

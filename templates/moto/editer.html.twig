@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} 
+#{{moto.id}}
+{{moto.nom}}
+{% endblock %} 
+
+
+{% block body %}
+<h1>{{ moto.nom | title}}</h1>
+{{form(Form)}}
+{% endblock %}

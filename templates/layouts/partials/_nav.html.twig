@@ -1,0 +1,15 @@
+<nav class= "navbar navbar-expand-md navbar-dark bg-dark">
+            <div class = "container-fluid">
+            <ul class = "navbar-nav me-auto">
+            <li class='navbar-brand'>
+             <a>JLF Moto</a>
+             </li>
+            <li class='nav-item'>
+            <a class = "nav-link {{app.current_route == '' ? 'active' : ''}}" href={{ url('liste_moto') }}>Acceuil</a>
+            </li>  
+             <li class='nav-item'>
+            <a class = "nav-link {{app.current_route == '' ? 'active' : ''}}" href={{ url('creer') }}>Création</a>
+            </li>
+            </ul> 
+            </div>
+        </nav>

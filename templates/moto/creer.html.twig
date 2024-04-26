@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} 
+
+{% endblock %} 
+
+
+{% block body %}
+
+{{ form_start(Form)}}
+        <div class="d-flex gap-3">
+            {{ form_row(Form.nom) }} 
+            {{ form_row(Form.marque) }}
+        </div>
+        <div class="d-flex">
+        {{form_row(Form.couleur)}}
+        </div>
+        <div class="d-flex">
+            {{ form_row(Form.annee)   }}
+        </div>
+         <div class="d-flex">
+            {{ form_row(Form.prix)   }}
+        </div>
+        <div>
+        {{ form_row(Form.save,{'label':'Créer'})}}
+        </div>
+    {{ form_end(Form) }}
+{% endblock %}

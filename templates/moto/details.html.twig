@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}{{ moto.nom }}{% endblock %}
+
+{% block body %}
+<h3>Bienvenue sur la page de la {{moto.nom}}</h3>
+
+<p>Marque : {{moto.marque}}</p>
+<p>Couleur : {{moto.couleur}}</p>
+<p>Année : {{moto.annee}}</p>
+<p>Prix : {{moto.prix}}</p>
+
+{% endblock %}
